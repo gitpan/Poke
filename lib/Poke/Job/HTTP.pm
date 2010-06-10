@@ -1,6 +1,6 @@
 package Poke::Job::HTTP;
 BEGIN {
-  $Poke::Job::HTTP::VERSION = '1.101040';
+  $Poke::Job::HTTP::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -56,7 +56,7 @@ Poke::Job::HTTP
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

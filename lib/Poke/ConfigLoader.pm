@@ -1,6 +1,6 @@
 package Poke::ConfigLoader;
 BEGIN {
-  $Poke::ConfigLoader::VERSION = '1.101040';
+  $Poke::ConfigLoader::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -50,7 +50,7 @@ class Poke::ConfigLoader
             ->kv
             ->grep(sub {$junc ne $_->[0]});
 
-        $jcfg->each_value(sub {Class::MOP::load_class($_->[0])});
+        $jcfg->each_value(sub {Class::MOP::load_class($_->[1]->{class}) unless Class::MOP::is_class_loaded($_->[1]->{class})});
 
         return $jcfg;
     }
@@ -66,7 +66,7 @@ Poke::ConfigLoader
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

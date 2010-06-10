@@ -1,6 +1,6 @@
 package Poke::Role::ConfigLoader;
 BEGIN {
-  $Poke::Role::ConfigLoader::VERSION = '1.101040';
+  $Poke::Role::ConfigLoader::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -65,7 +65,7 @@ Poke::Role::ConfigLoader
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

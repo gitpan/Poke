@@ -1,6 +1,6 @@
 package Poke::Web::Middleware::Schema;
 BEGIN {
-  $Poke::Web::Middleware::Schema::VERSION = '1.101040';
+  $Poke::Web::Middleware::Schema::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -27,7 +27,7 @@ Poke::Web::Middleware::Schema
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package Poke::Schema::Result::PokeResults;
 BEGIN {
-  $Poke::Schema::Result::PokeResults::VERSION = '1.101040';
+  $Poke::Schema::Result::PokeResults::VERSION = '1.101610';
 }
 use base 'DBIx::Class';
 use DBIx::Class::InflateColumn::Object::Enum;
@@ -60,7 +60,7 @@ Poke::Schema::Result::PokeResults
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

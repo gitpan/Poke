@@ -6,13 +6,13 @@ build_requires:
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.31
-generated_by: 'Dist::Zilla version 2.100922'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.101582, CPAN::Meta::Converter version 2.101600'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Poke
-recommends: {}
 requires:
   Bread::Board: 0
   Config::Any: 0
@@ -23,8 +23,10 @@ requires:
   DBIx::Class::Schema: 0
   DateTime: 0
   DateTime::Format::SQLite: 0
+  FindBin: 0
   HTML::Zoom: 0
   HTTP::Request: 0
+  JSON::Any: 0
   LWP::UserAgent: 0
   List::AllUtils: 0
   Moose::Autobox: 0
@@ -44,6 +46,7 @@ requires:
   POEx::Types::PSGIServer: 0
   POEx::WorkerPool: 0
   POEx::WorkerPool::Types: 0
+  POEx::WorkerPool::Worker: 0
   POEx::WorkerPool::WorkerEvents: 0
   Perl6::Junction: 0
   Scalar::Util: 0
@@ -52,4 +55,4 @@ requires:
   aliased: 0
 resources:
   repository: git://github.com/nperez/poke.git
-version: 1.101040
+version: 1.101610

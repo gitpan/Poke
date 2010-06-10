@@ -1,8 +1,7 @@
 package Poke::Cmd;
 BEGIN {
-  $Poke::Cmd::VERSION = '1.101040';
+  $Poke::Cmd::VERSION = '1.101610';
 }
-sub POE::Kernel::CATCH_EXCEPTIONS () { 0 }
 use MooseX::Declare;
 
 class Poke::Cmd
@@ -49,6 +48,7 @@ class Poke::Cmd
 
             service 'config' => 
             (
+                lifecycle => 'Singleton',
                 block => sub
                 {
                     $self->config_loader();
@@ -57,12 +57,14 @@ class Poke::Cmd
 
             service 'logger' =>
             (
+                lifecycle => 'Singleton',
                 class => 'Poke::Logger',
                 dependencies => { config => depends_on('/config') }
             );
             
             service 'web' =>
             (
+                lifecycle => 'Singleton',
                 class => 'Poke::Web',
                 block => sub
                 {
@@ -72,6 +74,7 @@ class Poke::Cmd
                         $s->param('config')->web_config->flatten,
                         logger => $s->param('logger'),
                         schema => $s->param('schema'),
+                        config => $s->param('config'),
                     )
                 },
                 dependencies =>
@@ -84,6 +87,7 @@ class Poke::Cmd
             
             service 'reporter' =>
             (
+                lifecycle => 'Singleton',
                 class => 'Poke::Reporter',
                 dependencies =>
                 {
@@ -95,13 +99,14 @@ class Poke::Cmd
 
             service 'pool' =>
             (
+                lifecycle => 'Singleton',
                 block => sub
                 {
                     my $s = shift;
                     POEx::WorkerPool->new
                     (
                         $s->param('config')->pool_config->flatten,
-                        job_classes => $s->param('config')->jobs_config->map(sub{$_->[0]})
+                        job_classes => $s->param('config')->jobs_config->map(sub{$_->[1]->{class}})
                     );
                 },
                 dependencies => 
@@ -113,6 +118,7 @@ class Poke::Cmd
             
             service 'poke' =>
             (
+                lifecycle => 'Singleton',
                 block => sub
                 {
                     my $s = shift;
@@ -137,7 +143,7 @@ class Poke::Cmd
             );
         };
 
-        $container->get_service('logger')->get()->info("Poke configuration loaded\n");
+        $container->get_service('logger')->get()->info('Poke configuration loaded');
         return $container;
     }
 
@@ -175,7 +181,7 @@ Poke::Cmd
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package Poke::Types;
 BEGIN {
-  $Poke::Types::VERSION = '1.101040';
+  $Poke::Types::VERSION = '1.101610';
 }
 use warnings;
 use strict;
@@ -36,7 +36,7 @@ Poke::Types
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package Poke::Web::Middleware::Logger;
 BEGIN {
-  $Poke::Web::Middleware::Logger::VERSION = '1.101040';
+  $Poke::Web::Middleware::Logger::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -27,7 +27,7 @@ Poke::Web::Middleware::Logger
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

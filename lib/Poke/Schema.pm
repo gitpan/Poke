@@ -1,6 +1,6 @@
 package Poke::Schema;
 BEGIN {
-  $Poke::Schema::VERSION = '1.101040';
+  $Poke::Schema::VERSION = '1.101610';
 }
 use base qw/DBIx::Class::Schema/;
 __PACKAGE__->load_namespaces();
@@ -15,7 +15,7 @@ Poke::Schema
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

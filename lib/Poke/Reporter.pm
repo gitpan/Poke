@@ -1,6 +1,6 @@
 package Poke::Reporter;
 BEGIN {
-  $Poke::Reporter::VERSION = '1.101040';
+  $Poke::Reporter::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -99,7 +99,7 @@ class Poke::Reporter
     {
         my $vals = 
         {
-            job_name => blessed($job),
+            job_name => $job->name,
             job_uuid => $job->ID,
             job_start => DateTime->now(),
             job_status => 'inprogress'
@@ -137,7 +137,7 @@ Poke::Reporter
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

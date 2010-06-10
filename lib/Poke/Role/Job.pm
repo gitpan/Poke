@@ -1,6 +1,6 @@
 package Poke::Role::Job;
 BEGIN {
-  $Poke::Role::Job::VERSION = '1.101040';
+  $Poke::Role::Job::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -11,6 +11,7 @@ role Poke::Role::Job
     requires qw/setup run/;
 
     has frequency => (is => 'ro', isa => Int, default => sub { 60 });
+    has name => (is => 'ro', isa => Str, required => 1);
 
     method init_job
     {
@@ -39,7 +40,7 @@ Poke::Role::Job
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

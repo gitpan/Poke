@@ -1,6 +1,6 @@
 package Poke::Util;
 BEGIN {
-  $Poke::Util::VERSION = '1.101040';
+  $Poke::Util::VERSION = '1.101610';
 }
 use MooseX::Declare;
 
@@ -24,7 +24,7 @@ Poke::Util
 
 =head1 VERSION
 
-version 1.101040
+version 1.101610
 
 =head1 AUTHOR
 

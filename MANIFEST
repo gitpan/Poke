@@ -1,12 +1,14 @@
 Changes
 LICENSE
 MANIFEST
+META.json
 META.yml
 Makefile.PL
 README
 bin/poked
 dist.ini
 example.ini
+html/index.html
 lib/Poke.pm
 lib/Poke/Cmd.pm
 lib/Poke/ConfigLoader.pm
@@ -24,7 +26,5 @@ lib/Poke/Web/Embedded.pm
 lib/Poke/Web/Middleware.pm
 lib/Poke/Web/Middleware/Logger.pm
 lib/Poke/Web/Middleware/Schema.pm
-t/release-pod-coverage.t
 t/release-pod-syntax.t
-thingy.db
 weaver.ini
